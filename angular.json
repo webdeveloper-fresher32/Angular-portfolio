@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "demo": {
+    "Developer": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/demo",
+            "outputPath": "dist/developer",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -37,7 +37,8 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -74,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "demo:build:production"
+              "buildTarget": "Developer:build:production"
             },
             "development": {
-              "buildTarget": "demo:build:development"
+              "buildTarget": "Developer:build:development"
             }
           },
           "defaultConfiguration": "development"
