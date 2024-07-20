@@ -4,28 +4,16 @@ import { Project } from '../../../projects.model';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
   projects: Project[] = [
     {
-      title: 'Project One',
-      description: 'A brief description of project one.',
-      imageUrl: 'assets/project-one.jpg',
-      link: 'https://example.com/project-one'
+      title: 'Basic react quiz app',
+      description:
+        'Built and quiz app using react usereducer and prop drilling concepts in react',
+      imageUrl: 'quiz-app.png',
+      link: 'https://basic-react-quizz-app.netlify.app/',
     },
-    {
-      title: 'Project Two',
-      description: 'A brief description of project two.',
-      imageUrl: 'assets/project-two.jpg',
-      link: 'https://example.com/project-two'
-    },
-    {
-      title: 'Project Three',
-      description: 'A brief description of project three.',
-      imageUrl: 'assets/project-three.jpg',
-      link: 'https://example.com/project-three'
-    }
   ];
-
 }

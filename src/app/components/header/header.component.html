@@ -1,12 +1,19 @@
 <nav class="bg-gray-800 text-white flex justify-between items-center px-4 py-6">
   <a href="#" class="flex items-center">
-    <span class="font-bold text-xl hover:text-red-600">{{name}}</span>
+    <span class="font-bold text-xl hover:text-red-600">{{ name }}</span>
   </a>
 
-  <ul class="hidden md:flex  space-x-16 text-1xl">
-    <li><a href="#about" class="hover:text-red-600">About Me</a></li>
-    <li><a href="#projects" class="hover:text-red-600">Projects</a></li>
-    <li><a href="#skills" class="hover:text-red-600">Skills</a></li>
-    <li><a href="#contact" class="hover:text-red-600">Contact</a></li>
+  <ul class="hidden md:flex space-x-16 text-1xl">
+    <li>
+      <a
+        [routerLink]="['/']"
+        (click)="scrollTo('hero-section')"
+        class="hover:text-red-600"
+        >About Me</a
+      >
+    </li>
+    <li><a [routerLink]="['/']" (click)="scrollTo('projects')" class="hover:text-red-600">Projects</a></li>
+    <li><a [routerLink]="['/']" (click)="scrollTo('skills')" class="hover:text-red-600">Skills</a></li>
+    <li><a [routerLink]="['/']" (click)="scrollTo('contact')" class="hover:text-red-600">Contact</a></li>
   </ul>
 </nav>

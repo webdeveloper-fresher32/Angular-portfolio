@@ -1,28 +1,53 @@
 <div class="min-h-screen bg-gray-900 text-white py-12">
-    <div class="container mx-auto px-4">
-      <header class="bg-gray-800 py-6 rounded-lg mb-8 text-center">
-        <h1 class="text-4xl font-bold">Contact Me</h1>
-        <p class="text-gray-400 mt-2">I'd love to hear from you! Fill out the form below to get in touch.</p>
-      </header>
-      <div class="max-w-lg mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
-        <form (ngSubmit)="onSubmit()">
-          <div class="mb-4">
-            <label class="block text-gray-400 mb-2" for="name">Name</label>
-            <input type="text" id="name" [(ngModel)]="contactForm.name" name="name" required class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-400 mb-2" for="email">Email</label>
-            <input type="email" id="email" [(ngModel)]="contactForm.email" name="email" required class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-400 mb-2" for="message">Message</label>
-            <textarea id="message" [(ngModel)]="contactForm.message" name="message" rows="5" required class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-          </div>
-          <button type="submit" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition duration-200">
-            Send Message
-          </button>
-        </form>
-      </div>
+  <div class="container mx-auto px-4">
+    <header class="bg-gray-800 py-6 rounded-lg mb-8 text-center">
+      <h1 class="text-4xl font-bold">Contact Me</h1>
+      <p class="text-gray-400 mt-2">
+        I'd love to hear from you! Fill out the form below to get in touch.
+      </p>
+    </header>
+    <div class="max-w-lg mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
+      <form (ngSubmit)="onSubmit()">
+        <div class="mb-4">
+          <label class="block text-gray-400 mb-2" for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            [(ngModel)]="contactForm.name"
+            name="name"
+            required
+            class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-400 mb-2" for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            [(ngModel)]="contactForm.email"
+            name="email"
+            required
+            class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-400 mb-2" for="message">Message</label>
+          <textarea
+            id="message"
+            [(ngModel)]="contactForm.message"
+            name="message"
+            rows="5"
+            required
+            class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition duration-200"
+        >
+          Send Message
+        </button>
+      </form>
     </div>
   </div>
-  
+</div>

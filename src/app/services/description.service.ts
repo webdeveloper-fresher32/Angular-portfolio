@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, interval } from 'rxjs';
+import { Observable } from 'rxjs';
 
 
 
@@ -20,7 +20,7 @@ export class DescriptionService {
           observer.complete();
           return;
         }
-        displayedText += text.charAt(displayedText.length); 
+        displayedText += text.charAt(displayedText.length);
         observer.next(displayedText);
       }, 25);
     });
