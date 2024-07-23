@@ -15,5 +15,11 @@ export class ProjectsComponent {
       imageUrl: 'quiz-app.png',
       link: 'https://basic-react-quizz-app.netlify.app/',
     },
+    {
+      title:"Demo-paytm-appication",
+      description:"Built a demo paytm application using MERN stack technologies end to end application to transfer money from one user to another user",
+      imageUrl:"Paytm.png",
+      link:"https://demo-paytm-fullstack-application.netlify.app/"
+    }
   ];
 }
