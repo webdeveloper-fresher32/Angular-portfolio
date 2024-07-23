@@ -14,6 +14,16 @@ import { ContactmeComponent } from './components/contactme/contactme.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+import { MatInputModule } from '@angular/material/input';
+import { AccordianComponent } from './components/accordian/accordian.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -24,9 +34,23 @@ import { ProjectsComponent } from './components/projects/projects.component';
     SkillsComponent,
     ContactmeComponent,
     ProjectsComponent,
+    AccordianComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CommonModule, FormsModule],
-  providers: [provideClientHydration()],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CommonModule,
+    FormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatListModule,
+  ],
+  providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,0 +1,39 @@
+.accordion-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* Adjust the gap as needed */
+    justify-content: center;
+}
+
+.accordion-item {
+    flex: 1 1 auto;
+
+    max-width: 300px;
+    /* Ensure the max width of the panel */
+    box-sizing: border-box;
+}
+
+.mat-expansion-panel {
+
+    color: white;
+}
+
+.mat-expansion-panel-header {
+    justify-content: center;
+}
+
+.cert-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .accordion-item {
+        flex: 1 1 100%;
+        /* Full width on smaller screens */
+        max-width: 100%;
+    }
+}

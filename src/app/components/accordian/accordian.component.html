@@ -1,0 +1,23 @@
+<div class="bg-gray-800">
+  <div class="container mx-auto py-8">
+    <h2 class="text-4xl font-bold text-white text-center">
+      Certificates and Achievements
+    </h2>
+    <div class="accordion-container flex flex-wrap justify-center gap-4">
+      <div *ngFor="let data of certifications" class="accordion-item">
+        <mat-accordion [multi]="false">
+          <mat-expansion-panel class="text-center">
+            <mat-expansion-panel-header>
+              <mat-panel-title>{{ data.title }}</mat-panel-title>
+            </mat-expansion-panel-header>
+            <img
+              src="{{ data.imageurl }}"
+              class="cert-image"
+              alt="sample image"
+            />
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,25 +3,23 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-contactme',
   templateUrl: './contactme.component.html',
-  styleUrl: './contactme.component.css'
+  styleUrl: './contactme.component.css',
 })
 export class ContactmeComponent {
   contactForm = {
     name: '',
     email: '',
-    message: ''
+    message: '',
   };
 
-  constructor() { }
+  sendEmail() {
+    const { name, email, message } = this.contactForm;
+    const subject = `Contact from ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const mailtoLink = `mailto:pirikiralaganesh1234@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
 
-  onSubmit() {
-    // Handle form submission, e.g., send the form data to a server
-    console.log('Form submitted:', this.contactForm);
-    // Reset form
-    this.contactForm = {
-      name: '',
-      email: '',
-      message: ''
-    };
+    window.location.href = mailtoLink;
   }
 }
