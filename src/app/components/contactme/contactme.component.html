@@ -7,46 +7,69 @@
       </p>
     </header>
     <div class="max-w-lg mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
-      <form (ngSubmit)="sendEmail()">
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="mb-4">
           <label class="block text-gray-400 mb-2" for="name">Name</label>
           <input
             type="text"
             id="name"
-            [(ngModel)]="contactForm.name"
             name="name"
+            ngModel
             required
+            #name="ngModel"
             class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
+          <div *ngIf="name.invalid && name.touched" class="text-red-500">
+            Name is required.
+          </div>
         </div>
         <div class="mb-4">
           <label class="block text-gray-400 mb-2" for="email">Email</label>
           <input
             type="email"
             id="email"
-            [(ngModel)]="contactForm.email"
             name="email"
+            ngModel
             required
+            #email="ngModel"
             class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
+          <div *ngIf="email.invalid && email.touched" class="text-red-500">
+            Valid email is required.
+          </div>
         </div>
         <div class="mb-4">
           <label class="block text-gray-400 mb-2" for="message">Message</label>
           <textarea
             id="message"
-            [(ngModel)]="contactForm.message"
             name="message"
+            ngModel
             rows="5"
             required
+            #message="ngModel"
             class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           ></textarea>
+          <div *ngIf="message.invalid && message.touched" class="text-red-500">
+            Message is required.
+          </div>
         </div>
         <button
           type="submit"
+          [disabled]="contactForm.invalid"
           class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition duration-200"
         >
           Send Message
         </button>
+        <div
+          *ngIf="resultMessage"
+          class="mt-4 text-center"
+          [ngClass]="{
+            'text-green-400': resultSuccess,
+            'text-red-500': !resultSuccess
+          }"
+        >
+          {{ resultMessage }}
+        </div>
       </form>
     </div>
   </div>
