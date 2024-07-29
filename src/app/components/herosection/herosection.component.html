@@ -1,3 +1,30 @@
+<!-- <section class="hero flex items-center min-h-screen bg-gray-800">
+  <div
+    class="container flex flex-col lg:flex-row justify-evenly lg:pl-60 px-4 lg:px-0"
+  >
+    <img
+      class="rounded-lg max-w-full lg:max-w-[500px] lg:max-h-[500px] mb-6 lg:mb-0 shadow-2xl hidden sm:block"
+      [src]="image"
+      alt="Ganesh - Full Stack Developer"
+    />
+    <div class="px-6 text-center lg:text-left">
+      <h1 class="text-4xl font-bold text-white">
+        Hi, <span class="text-red-700 hover:text-white">{{ my_name }}</span>
+      </h1>
+      <h2 class="text-2xl text-gray-300 mt-2 lg:mt-4">Full Stack Developer</h2>
+      <p class="text-gray-500 text-lg mt-4 hover:text-cyan-700">
+        {{ animatedText }}
+      </p>
+      <a
+        [href]="resumeurl"
+        target="_blank"
+        download="Resume-me.pdf"
+        class="btn mt-6 inline-flex items-center px-4 py-2 bg-gray-800 text-white hover:bg-gradient-to-tr from-violet-400 to-violet-600 hover:text-white rounded-full hover:bg-opacity-75 transform transition duration-300 ease-in-out"
+        >View Resume</a
+      >
+    </div>
+  </div>
+</section> -->
 <section class="hero flex items-center min-h-screen bg-gray-800">
   <div
     class="container flex flex-col lg:flex-row justify-evenly lg:pl-60 px-4 lg:px-0"
@@ -9,10 +36,12 @@
     />
     <div class="px-6 text-center lg:text-left">
       <h1 class="text-4xl font-bold text-white">
-        Hi, <span class="text-red-700 hover:text-white">{{my_name}}</span>
+        Hi, <span class="text-red-700 hover:text-white">{{ my_name }}</span>
       </h1>
       <h2 class="text-2xl text-gray-300 mt-2 lg:mt-4">Full Stack Developer</h2>
-      <p class="text-gray-500 text-lg mt-4 hover:text-cyan-700">{{ animatedText }}</p>
+      <p class="text-gray-500 text-lg mt-4 hover:text-cyan-700">
+        {{ animatedText }}
+      </p>
       <a
         [href]="resumeurl"
         target="_blank"
@@ -23,3 +52,33 @@
     </div>
   </div>
 </section>
+
+<style>
+  .hero {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image on smaller screens */
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 300px; /* Reduce the size for smaller screens */
+      max-height: calc(65vh - 100px);
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 640px) {
+    img {
+      width: 300px; /* Further reduce the size for very small screens */
+      max-height: calc(65vh - 100px);
+      object-fit: cover;
+    }
+  }
+</style>

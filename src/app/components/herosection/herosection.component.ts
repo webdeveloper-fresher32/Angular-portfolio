@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { DescriptionService } from '../../services/description.service';
 
 @Component({
@@ -23,4 +23,5 @@ export class HerosectionComponent implements OnInit {
         this.animatedText = text;
       });
   }
+  
 }
