@@ -8,7 +8,7 @@ import { DescriptionService } from '../../services/description.service';
 })
 export class HerosectionComponent implements OnInit {
   my_name: string = "I'm Ganesh";
-  image: string = 'myimage.jpg';
+  image: string = 'my_image.jpg';
   resumeurl: string =
     'https://drive.google.com/file/d/1TyhdvSsT7wX36575DRmD23D5oPQpoal-/view';
   descriptionText =
