@@ -1,4 +1,4 @@
-import { Component,  OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DescriptionService } from '../../services/description.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { DescriptionService } from '../../services/description.service';
   styleUrls: ['./herosection.component.css'],
 })
 export class HerosectionComponent implements OnInit {
+  insects: number[] = Array(30).fill(0);
   my_name: string = "I'm Ganesh";
   image: string = 'my_image.jpg';
   resumeurl: string =
@@ -23,5 +24,4 @@ export class HerosectionComponent implements OnInit {
         this.animatedText = text;
       });
   }
-  
 }

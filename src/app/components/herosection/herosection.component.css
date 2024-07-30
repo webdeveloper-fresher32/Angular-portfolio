@@ -1,0 +1,72 @@
+/* styles.css or global.css */
+@keyframes fly {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    25% {
+        transform: translateX(20vw) translateY(20vh);
+    }
+
+    50% {
+        transform: translateX(40vw) translateY(0vh);
+    }
+
+    75% {
+        transform: translateX(60vw) translateY(30vh);
+    }
+
+    100% {
+        transform: translateX(100vw) translateY(10vh);
+    }
+}
+
+.insects-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+    background-color: black;
+}
+
+.insect {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgba(227, 224, 236, 0.8);
+    box-shadow: 0 0 10px rgba(120, 88, 88, 0.8);
+    animation: fly 10s linear infinite;
+}
+
+.insect:nth-child(odd) {
+    animation-duration: 10s;
+    background-color: rgba(255, 0, 0, 0.8);
+    /* Red */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.insect:nth-child(even) {
+    animation-duration: 12s;
+    background-color: rgba(0, 255, 0, 0.8);
+    /* Green */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+.insect:nth-child(3n) {
+    animation-duration: 15s;
+    background-color: rgba(0, 0, 255, 0.8);
+    /* Blue */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+}
+
+.insect:nth-child(5n) {
+    animation-duration: 20s;
+    background-color: rgba(255, 255, 0, 0.8);
+    /* Yellow */
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+}
